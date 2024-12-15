@@ -3,7 +3,7 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-15T22:38:25+08:00</updated>
+    <updated>2024-12-15T22:41:18+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
@@ -151,7 +151,7 @@
         </content>
     </entry>
     <entry>
-        <title>环境变量</title>
+        <title>Flatpak 环境变量</title>
         <author>
             <name>和光同尘</name>
         </author>
