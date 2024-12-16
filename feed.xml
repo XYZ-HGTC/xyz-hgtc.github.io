@@ -3,7 +3,7 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-15T23:02:42+08:00</updated>
+    <updated>2024-12-16T17:13:35+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://xyz-hgtc.github.io/spark-storexing-huo-shang-dianbu-yao-zai-shi-yong.html"/>
         <id>https://xyz-hgtc.github.io/spark-storexing-huo-shang-dianbu-yao-zai-shi-yong.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/6/2024-12-15_20-14.png" medium="image" />
-            <category term="Linux探索记录"/>
+            <category term="Linux随笔"/>
 
         <updated>2024-12-15T20:13:41+08:00</updated>
             <summary>
@@ -43,7 +43,8 @@
         <link href="https://xyz-hgtc.github.io/debian-12-i3wm-wan-mei-ti-yan.html"/>
         <id>https://xyz-hgtc.github.io/debian-12-i3wm-wan-mei-ti-yan.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/5/2024-12-14_21-22.png" medium="image" />
-            <category term="Linux探索记录"/>
+            <category term="系统探索日志"/>
+            <category term="Linux随笔"/>
 
         <updated>2024-12-14T19:39:05+08:00</updated>
             <summary>
@@ -158,7 +159,7 @@
         <link href="https://xyz-hgtc.github.io/huan-jing-bian-liang.html"/>
         <id>https://xyz-hgtc.github.io/huan-jing-bian-liang.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/4/Screenshot_20241109_233003.png" medium="image" />
-            <category term="Linux探索记录"/>
+            <category term="Linux随笔"/>
 
         <updated>2024-11-09T23:26:19+08:00</updated>
             <summary>
@@ -184,7 +185,7 @@
         <link href="https://xyz-hgtc.github.io/linuxsheng-dian-pei-zhi-tlp.html"/>
         <id>https://xyz-hgtc.github.io/linuxsheng-dian-pei-zhi-tlp.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/3/Ping-Mu-Jie-Tu_20241105_220518.jpg" medium="image" />
-            <category term="Linux探索记录"/>
+            <category term="Linux随笔"/>
 
         <updated>2024-11-05T22:03:20+08:00</updated>
             <summary>
@@ -213,7 +214,7 @@
         <link href="https://xyz-hgtc.github.io/fedora-41andkde-plasma-622.html"/>
         <id>https://xyz-hgtc.github.io/fedora-41andkde-plasma-622.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/2/KDEandFedora.jpg" medium="image" />
-            <category term="Linux探索记录"/>
+            <category term="Linux随笔"/>
 
         <updated>2024-11-04T20:28:41+08:00</updated>
             <summary>
