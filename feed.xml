@@ -3,12 +3,57 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-16T17:13:35+08:00</updated>
+    <updated>2024-12-17T20:43:43+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
     <id>https://xyz-hgtc.github.io</id>
 
+    <entry>
+        <title>2024.12.08 C语言语法错误</title>
+        <author>
+            <name>和光同尘</name>
+        </author>
+        <link href="https://xyz-hgtc.github.io/20241208-cyu-yan-yu-fa-cuo-wu.html"/>
+        <id>https://xyz-hgtc.github.io/20241208-cyu-yan-yu-fa-cuo-wu.html</id>
+        <media:content url="https://xyz-hgtc.github.io/media/posts/7/OIP-C.jpeg" medium="image" />
+            <category term="错误程序日志"/>
+
+        <updated>2024-12-17T20:39:25+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://xyz-hgtc.github.io/media/posts/7/OIP-C.jpeg" alt="" />
+                    原版错误代码 #include &lt;stdio.h&gt; int main(int a, int b) { printf(&quot;input a number&quot;);&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://xyz-hgtc.github.io/media/posts/7/OIP-C.jpeg" class="type:primaryImage" alt="" /></p>
+                <h1 id="原版错误代码">原版错误代码</h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(int a, int b)
+{
+    printf(&quot;input a number&quot;);
+        scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+        printf(&quot;a = %d, b = %d, a + b = %d + %d = %d&quot;, a, b,a+b);
+        return 0;
+}
+</code></pre>
+<h1 id="纠正后代码">纠正后代码</h1>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(int a, int b)
+{
+    printf(&quot;input a number&quot;);
+        scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+        printf(&quot;a = %d, b = %d, a + b = %d + %d = %d&quot;, a, b,a,b,a+b);
+        return 0;
+}
+</code></pre>
+<h1 id="错误原因">错误原因</h1>
+<p>代码中“%d”和未知数位置没有对应，导致为达到预想效果</p><p><em><strong>错误代码来源：小红书</strong></em></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Spark Store(星火商店) 注意包名！！！</title>
         <author>
