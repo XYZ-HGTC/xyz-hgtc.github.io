@@ -3,12 +3,40 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-17T20:43:43+08:00</updated>
+    <updated>2024-12-18T20:39:43+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
     <id>https://xyz-hgtc.github.io</id>
 
+    <entry>
+        <title>i3wm与键盘</title>
+        <author>
+            <name>和光同尘</name>
+        </author>
+        <link href="https://xyz-hgtc.github.io/i3wmyu-jian-pan.html"/>
+        <id>https://xyz-hgtc.github.io/i3wmyu-jian-pan.html</id>
+        <media:content url="https://xyz-hgtc.github.io/media/posts/8/Xia-Zai.jpeg" medium="image" />
+            <category term="Linux随笔"/>
+
+        <updated>2024-12-18T20:38:21+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://xyz-hgtc.github.io/media/posts/8/Xia-Zai.jpeg" alt="" />
+                    键盘的更换 在一开始接触到笔记本是13英寸的ThinkPad X250，这键盘就是最小的键盘，我发现键盘的间距不大，不需要手过多的移动就可以按到想要的按键，所以当时我就喜欢上了13英寸的笔记本，但是后来开始上文字录入的课程就发现自己的手指没有办法放在标准的键盘上，位置也总是不对。最近想换键盘，本来是看上了一个89键的机械三模键盘，可是后价格还是有点贵，就暂时找了一个插线的有线键盘使用，可是使用起来却发现比之前使用的薄膜键盘还要好用，而且以前认为的键盘摆放方式似乎有点问题。 以前因为键盘的小巧和Windows系统的影响，没有犹豫就选择使用Windows徽标键作为默认的Mod键，但是在写快捷键的配置文件的时候也遇到了很多的问题，就是Windows徽标键经常用于系统的关机等快捷键会容易误触导致文件在编辑的时候就因为关而消失，为了尽量避免就使用Mod+Ctrl键来避免。 也因为换了键盘，才发现将Alt键作为Mod键的好处，所以我就索性将Windows徽标设置为sys，以后就可以直接调用了。
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://xyz-hgtc.github.io/media/posts/8/Xia-Zai.jpeg" class="type:primaryImage" alt="" /></p>
+                <h1>键盘的更换</h1>
+<p>在一开始接触到笔记本是13英寸的ThinkPad X250，这键盘就是最小的键盘，我发现键盘的间距不大，不需要手过多的移动就可以按到想要的按键，所以当时我就喜欢上了13英寸的笔记本，但是后来开始上文字录入的课程就发现自己的手指没有办法放在标准的键盘上，位置也总是不对。最近想换键盘，本来是看上了一个89键的机械三模键盘，可是后价格还是有点贵，就暂时找了一个插线的有线键盘使用，可是使用起来却发现比之前使用的薄膜键盘还要好用，而且以前认为的键盘摆放方式似乎有点问题。</p>
+<h1>与i3wm的关系</h1>
+<p>以前因为键盘的小巧和Windows系统的影响，没有犹豫就选择使用Windows徽标键作为默认的Mod键，但是在写快捷键的配置文件的时候也遇到了很多的问题，就是Windows徽标键经常用于系统的关机等快捷键会容易误触导致文件在编辑的时候就因为关而消失，为了尽量避免就使用Mod+Ctrl键来避免。</p>
+<p>也因为换了键盘，才发现将Alt键作为Mod键的好处，所以我就索性将Windows徽标设置为sys，以后就可以直接调用了。</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>2024.12.08 C语言语法错误</title>
         <author>
@@ -112,7 +140,7 @@ int main(int a, int b)
 <h1>安装</h1>
 <h4>镜像下载</h4>
 <p data-pid="hrt3i0S2">点击<a href="https://link.zhihu.com/?target=https%3A//cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.5.0-amd64-netinst.iso" target="null" rel="nofollow">此链接</a>即可下载镜像。</p>
-<p data-pid="YmKh6wZc"><strong>在Windows系统上，</strong>使用Rufus工具写入，此为标准版<a href="https://link.zhihu.com/?target=https%3A//github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe" class=" wrap external" target="_blank" rel="nofollow noopener noreferrer" data-za-detail-view-id="1043">下载链接</a>。在Linux和Windows系统都可以使用的是<a class="RichContent-EntityWord css-b7erz1" data-za-not-track-link="true" data-paste-text="true" href="https://zhida.zhihu.com/search?content_id=244631996&amp;content_type=Article&amp;match_order=1&amp;q=ventoy&amp;zhida_source=entity" target="_blank" rel="noopener">ventoy<svg width="10px" height="10px" viewbox="0 0 16 16" class="ZDI ZDI--FourPointedStar16 css-1dvsrp" fill="currentColor" data-darkreader-inline-fill=""><path d="m5.068 9.267-3.08-.77a.512.512 0 0 1 0-.994l3.08-.77a2.289 2.289 0 0 0 1.665-1.665l.77-3.08a.512.512 0 0 1 .994 0l.77 3.08c.205.82.845 1.46 1.665 1.665l3.08.77a.512.512 0 0 1 0 .994l-3.08.77a2.29 2.29 0 0 0-1.665 1.665l-.77 3.08a.512.512 0 0 1-.994 0l-.77-3.08a2.289 2.289 0 0 0-1.665-1.665Z"></path></svg></a>，<a href="https://link.zhihu.com/?target=https%3A//www.lanzoui.com/i5ETa219q9qj" class=" wrap external" target="_blank" rel="nofollow noopener noreferrer" data-za-detail-view-id="1043">Windows下载</a> <a href="https://link.zhihu.com/?target=https%3A//www.lanzoui.com/iIzVH219q9dg" class=" wrap external" target="_blank" rel="nofollow noopener noreferrer" data-za-detail-view-id="1043">Linux下载</a>。</p>
+<p data-pid="YmKh6wZc"><strong>在Windows系统上，</strong>使用Rufus工具写入，此为标准版<a href="https://link.zhihu.com/?target=https%3A//github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe" class=" wrap external" target="_blank" rel="nofollow noopener noreferrer" data-za-detail-view-id="1043">下载链接</a>。在Linux和Windows系统都可以使用的是<a class="RichContent-EntityWord css-b7erz1" data-za-not-track-link="true" data-paste-text="true" href="https://zhida.zhihu.com/search?content_id=244631996&amp;content_type=Article&amp;match_order=1&amp;q=ventoy&amp;zhida_source=entity" target="_blank" rel="noopener">ventoy</a>，<a href="https://link.zhihu.com/?target=https%3A//www.lanzoui.com/i5ETa219q9qj" class=" wrap external" target="_blank" rel="nofollow noopener noreferrer" data-za-detail-view-id="1043">Windows下载</a> <a href="https://link.zhihu.com/?target=https%3A//www.lanzoui.com/iIzVH219q9dg" class=" wrap external" target="_blank" rel="nofollow noopener noreferrer" data-za-detail-view-id="1043">Linux下载</a>。</p>
 <h4 data-pid="YmKh6wZc">Debian 12 网络安装注意事项</h4>
 <p data-pid="66-lHWwa">正常引导并进入，正常选择即可。在选择镜像源的时候建议选择清华的，我多次安装只有清华源每次都正常。</p>
 <p data-pid="yh0qXKnG">选择完软件源后就会出现桌面选择的界面，这里只选择最后一项，也就是标准系统工具即可。</p>
