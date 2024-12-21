@@ -3,7 +3,7 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-20T22:30:54+08:00</updated>
+    <updated>2024-12-21T11:16:07+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
@@ -62,6 +62,13 @@
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="添加图片" data-columns="3">
 <figure class="gallery__item"><a href="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-20_22-25-2.png" data-size="1334x744"><img loading="lazy" src="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-20_22-25-2-thumbnail.webp" alt="" width="768" height="428"></a></figure>
 <figure class="gallery__item"><a href="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-20_22-25_1-2.png" data-size="1343x737"><img loading="lazy" src="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-20_22-25_1-2-thumbnail.webp" alt="" width="768" height="421"></a></figure>
+</div></div>
+<p>说起写代码，那就不得不说说代码的编辑器了。Vim是我一直在使用一个编辑器，这就是一个开源软件，但是类似于无法复制等问题也让我同时装上了VSCodium这款VSCode的开源版本，但是因为扩展的问题，还是只能用于复制到剪切板了。</p>
+<p>下面是VSCodium和Vim的截图：</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="添加图片" data-columns="3">
+<figure class="gallery__item"><a href="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-21_10-45.png" data-size="1893x1030"><img loading="lazy" src="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-21_10-45-thumbnail.webp" alt="" width="768" height="418"></a></figure>
+<figure class="gallery__item"><a href="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-21_10-46.png" data-size="1894x1026"><img loading="lazy" src="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-21_10-46-thumbnail.webp" alt="" width="768" height="416"></a></figure>
+<figure class="gallery__item"><a href="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-21_10-47.png" data-size="1893x1028"><img loading="lazy" src="https://xyz-hgtc.github.io/media/posts/10/gallery/2024-12-21_10-47-thumbnail.webp" alt="" width="768" height="417"></a></figure>
 </div></div>
 <h1>在结尾，我更想说的是<strong>开源万岁</strong>！</h1>
             ]]>
