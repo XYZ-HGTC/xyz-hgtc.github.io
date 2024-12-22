@@ -3,12 +3,45 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-21T11:16:07+08:00</updated>
+    <updated>2024-12-22T20:26:18+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
     <id>https://xyz-hgtc.github.io</id>
 
+    <entry>
+        <title>模糊与性能</title>
+        <author>
+            <name>和光同尘</name>
+        </author>
+        <link href="https://xyz-hgtc.github.io/mo-hu-yu-xing-neng.html"/>
+        <id>https://xyz-hgtc.github.io/mo-hu-yu-xing-neng.html</id>
+        <media:content url="https://xyz-hgtc.github.io/media/posts/11/nkvuyDHwOb_small.jpg" medium="image" />
+            <category term="Linux随笔"/>
+
+        <updated>2024-12-22T20:26:18+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://xyz-hgtc.github.io/media/posts/11/nkvuyDHwOb_small.jpg" alt="" />
+                    窗口模糊 在使用i3wm的时候因为配置文件的问题看过不少配置的视频，在视频上看到了很多有趣的窗口样式。其中让我印象深刻的是窗口模糊，我觉得很好看，很美观。但是配置文件都是使用Picom进行渲染的，但是他们都使用的是高斯模糊，我只能使用最基本的内核模糊，但是这个模糊还是有不少的缺点。就像，窗口的黑边等问题。 模糊让我电脑的性能下降了很多，于是我还是想要关闭那个已经配置好的模糊效果。 因为模糊的出现，我就将透明度调整的非常低。如果将模糊全部去掉，就会根本看不清窗口中的文字。 在思考过模糊的作用之后，我觉得模糊的必要性似乎并不是非常大了，透明度是切换窗口的示意，模糊是遮罩，辅助看清窗口上的文字。 下面是我窗口模糊的配置文件： ################################# # Background-Blurring # ################################# #&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://xyz-hgtc.github.io/media/posts/11/nkvuyDHwOb_small.jpg" class="type:primaryImage" alt="" /></p>
+                <h1>窗口模糊</h1>
+<p>在使用i3wm的时候因为配置文件的问题看过不少配置的视频，在视频上看到了很多有趣的窗口样式。其中让我印象深刻的是窗口模糊，我觉得很好看，很美观。但是配置文件都是使用Picom进行渲染的，但是他们都使用的是高斯模糊，我只能使用最基本的内核模糊，但是这个模糊还是有不少的缺点。就像，窗口的黑边等问题。</p>
+<h1>切换没有模糊的原因</h1>
+<p>模糊让我电脑的性能下降了很多，于是我还是想要关闭那个已经配置好的模糊效果。</p>
+<p>因为模糊的出现，我就将透明度调整的非常低。如果将模糊全部去掉，就会根本看不清窗口中的文字。</p>
+<p>在思考过模糊的作用之后，我觉得模糊的必要性似乎并不是非常大了，透明度是切换窗口的示意，模糊是遮罩，辅助看清窗口上的文字。</p>
+<p>下面是我窗口模糊的配置文件：</p>
+<pre><code>#################################</code><br><code>#     Background-Blurring       #</code><br><code>#################################</code><br><br><code># experimental-backends = true</code><br><br><code># 背景模糊的参数，请参阅 *BLUR* 部分了解更多信息。</code><br><code># blur-background = true;</code><br><code># blur-background-frame = true;</code><br><code># blur-background-fixed = true;</code><br><code># blur-method = "dual_kawase";</code><br><code># blur-method = "gaussian";</code><br><code># blur-method = "kernel";</code><br><code># blur-strength = 70;</code><br><code># blur-radius = 7</code><br><br><code># blur-kern = "15,15,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,";</code><br><br><code># blur-kern = "7x7box";</code><br><br><code># 排除背景模糊的条件。</code><br><code># blur-background-exclude = []</code><br><code>blur-background-exclude = [</code><br><code>  "window_type = 'dock'",</code><br><code>  "window_type = 'desktop'",</code><br><code>  "window_type = 'hidden'",</code><br><code>  "class_g = 'firefox' &amp;&amp; window_type = 'popup_menu'",</code><br><code>  "name *= 'Fcitx5'",</code><br><code>  "name *= '腾讯视频'",</code><br><code>  "name *= '可可影视'",</code><br><code>  "name *= '哔哩哔哩'",</code><br><code>  "name *= 'VLC'",</code><br><code>  "_GTK_FRAME_EXTENTS@:c"</code><br><code>];</code></pre>
+<p>下面是我的淡入淡出与背景颜色深浅的配置文件：</p>
+<pre><code>#################################</code><br><code>#           Fading              #</code><br><code>#################################</code><br><br><br><code># 在打开/关闭和不透明度变化时淡入/淡出窗口，</code><br><code>#  unless no-fading-openclose is used.</code><br><code># fading = false</code><br><code>fading = true;</code><br><br><code># 淡入时步骤之间的不透明度变化。（0.01 - 1.0，默认为 0.028）</code><br><code># fade-in-step = 0.028</code><br><code>fade-in-step = 0.056;</code><br><br><code># 淡出时步骤之间的不透明度变化。 （0.01 - 1.0，默认为 0.03）</code><br><code># fade-out-step = 0.03</code><br><code>fade-out-step = 0.04;</code><br><br><code># 淡入淡出步骤之间的时间，以毫秒为单位。 （&gt; 0，默认为 10）</code><br><code># fade-delta = 1</code><br><br><code># 指定不应褪色的窗口条件列表。</code><br><code># fade-exclude = []</code><br><br><code># 不要在窗口打开/关闭时淡入淡出。</code><br><code>no-fading-openclose = true</code><br><br><code># 不要使用 WM 框架淡化被破坏的 ARGB 窗口。解决 Openbox、Fluxbox 等中的错误。</code><br><code>no-fading-destroyed-argb = false</code><br><br><br><code>#################################</code><br><code>#   Transparency / Opacity      #</code><br><code>#################################</code><br><br><br><code># 非活动窗口的不透明度。 （0.1 - 1.0，默认为 1.0）</code><br><code># inactive-opacity = 1</code><br><code>inactive-opacity = 0.75;</code><br><br><code># 窗口标题栏和边框的不透明度。 （0.1 - 1.0，默认禁用）</code><br><code># frame-opacity = 1.0</code><br><code># frame-opacity = 0.9;</code><br><br><code># 让 -i 设置的非活动不透明度覆盖窗口的 '_NET_WM_WINDOW_OPACITY' 值。</code><br><code># inactive-opacity-override = true</code><br><code>inactive-opacity-override = false;</code><br><br><code># 活动窗口的默认不透明度。 （0.0 - 1.0，默认为 1.0）</code><br><code>active-opacity = 0.95;</code><br><br><code># 使非活动窗口变暗。 （0.0 - 1.0，默认为 0.0）</code><br><code># inactive-dim = 0.0</code><br><br><code># 指定不应该被视为焦点的窗口的条件列表。</code><br><code># focus-exclude = []</code><br><code>focus-exclude = [ "class_g = 'Cairo-clock'" ];</code><br><br><code># 使用固定的非活动暗度值，而不是根据窗口不透明度进行调整。</code><br><code># inactive-dim-fixed = 1.0</code><br><br><code># 指定不透明度规则列表，格式为 `PERCENT:PATTERN`,</code><br><code># 像 `50:name *u003d "Firefox"`。建议使用 picom-trans。</code><br><code># 请注意，我们不保证可能与其他人发生冲突</code><br><code># 在框架或客户端窗口上设置“_NET_WM_WINDOW_OPACITY”的程序。</code><br><code># example:</code><br><code>#    opacity-rule = [ "80:class_g = 'URxvt'" ];</code><br><code>#</code><br><code>opacity-rule = [</code><br><code>  "100:name *= 'Fcitx5'",</code><br><code>  "100:name *= 'xfce4-power-manager'",</code><br><code>  "100:name *= '腾讯视频'",</code><br><code>  "100:name *= '可可影视'",</code><br><code>  "100:name *= '哔哩哔哩'",</code><br><code>  "100:name *= 'VLC'"</code><br><code>]</code></pre>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>开源软件</title>
         <author>
