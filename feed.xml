@@ -3,7 +3,7 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2024-12-28T11:10:10+08:00</updated>
+    <updated>2024-12-28T11:11:12+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
@@ -90,8 +90,7 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://xyz-hgtc.github.io/media/posts/5/2024-12-14_21-22-lg-2.webp" class="type:primaryImage" alt="" /></p>
-                <figure class="post__image"><img loading="lazy"  src="https://xyz-hgtc.github.io/media/posts/5/2024-12-14_21-22-lg.webp" alt="" width="1024" height="572" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="https://xyz-hgtc.github.io/media/posts/5/responsive/2024-12-14_21-22-lg-xs.webp 384w ,https://xyz-hgtc.github.io/media/posts/5/responsive/2024-12-14_21-22-lg-sm.webp 600w ,https://xyz-hgtc.github.io/media/posts/5/responsive/2024-12-14_21-22-lg-md.webp 768w ,https://xyz-hgtc.github.io/media/posts/5/responsive/2024-12-14_21-22-lg-lg.webp 1200w ,https://xyz-hgtc.github.io/media/posts/5/responsive/2024-12-14_21-22-lg-xl.webp 1600w"></figure>
-<h1>i3wm</h1>
+                <h1>i3wm</h1>
 <p>想要讲清楚i3wm还是要从DE,WM等词语开始讲起。</p>
 <p>DE(Desktop Enviroment)，中文意思是桌面环境。桌面环境就类似于Windows上面能看到的图形界面，换一种说法也就是常说的UI——用户界面。仔细观察每一个应用的窗口，你会发现右上角的三个键在很多应用中图标，或者说在鼠标放上去的时候显示的不一样，这就是每个应用自己做窗口而不和系统兼容的后果，虽然说苹果的左侧三个图标都有颜色，但是App内部的图形界面全部都是苹果的，这样看起来其实也没有多美观。</p>
 <p>WM(Windows Manager)，中文意思是窗口管理器，将窗口外面的三个键去掉后就是。</p>
