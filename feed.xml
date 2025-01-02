@@ -3,7 +3,7 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2025-01-02T22:13:58+08:00</updated>
+    <updated>2025-01-02T22:16:40+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
@@ -35,7 +35,7 @@
 <p>Markdown编辑器有很多，坚持一直免费的确很少，下面推荐一些Linux，Windows，Mac平台都可以使用的编辑器以及我使用下来的一些感受。</p>
 <ul style="list-style-type: circle;">
 <li>Typora<br>Typora之前的beta版本是在GitHub里面开源，但是在1.0版本之后就开始收费。在Ubuntu等Linux发行版中安装0.11.18版本还是可以使用的，但是在Windows上使用会麻烦不少，不仅要调时间，还有一大堆操作。不如换一个软件了。<br><br></li>
-<li>Obsidian<br>这个编辑器是在逛星火商店的时候在工具分区中偶然发现的，这个编辑器很适合新手去使用，不需要背很多的标题符号就可以很快速的上手。但是在格式的控制上并不是非常明确。<br><figure class="post__image"><img loading="lazy"  src="https://xyz-hgtc.github.io/media/posts/7/e60ed255142140abbe38f32363a34b99.png" alt="" width="1280" height="720" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-xs.webp 384w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-sm.webp 600w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-md.webp 768w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-lg.webp 1200w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-xl.webp 1600w"></figure><br><br></li>
+<li>Obsidian<br>这个编辑器是在逛星火商店的时候在工具分区中偶然发现的，这个编辑器很适合新手去使用，不需要背很多的标题符号就可以很快速的上手。但是在格式的控制上并不是非常明确。<br><figure class="post__image"><img loading="lazy"  src="https://xyz-hgtc.github.io/media/posts/7/e60ed255142140abbe38f32363a34b99.png" alt="" width="1280" height="720" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-xs.webp 384w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-sm.webp 600w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-md.webp 768w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-lg.webp 1200w ,https://xyz-hgtc.github.io/media/posts/7/responsive/e60ed255142140abbe38f32363a34b99-xl.webp 1600w"></figure></li>
 <li>MarkText<br>这个编辑器是在切换到Windows之后在GitHub上找到的第一个，发现这个和Typora的功能很像，而且可自定义的程度很高，就连显示的字体都可以自定义，但是在后面使用中发现格式规定上并不非常明确，也没有格式报错的功能。<br>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="添加图片" data-columns="3">
 <figure class="gallery__item"><a href="https://xyz-hgtc.github.io/media/posts/7/gallery/QQ20250102-220934.png" data-size="960x1040"><img loading="lazy" src="https://xyz-hgtc.github.io/media/posts/7/gallery/QQ20250102-220934-thumbnail.webp" alt="" width="768" height="832"></a></figure>
