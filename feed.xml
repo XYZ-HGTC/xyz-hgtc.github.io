@@ -3,12 +3,203 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2025-01-04T20:43:48+08:00</updated>
+    <updated>2025-01-04T21:11:16+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
     <id>https://xyz-hgtc.github.io</id>
 
+    <entry>
+        <title>Python PDF</title>
+        <author>
+            <name>和光同尘</name>
+        </author>
+        <link href="https://xyz-hgtc.github.io/python-pdf.html"/>
+        <id>https://xyz-hgtc.github.io/python-pdf.html</id>
+        <media:content url="https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg" medium="image" />
+            <category term="程序随笔"/>
+
+        <updated>2025-01-04T21:09:55+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg" alt="" />
+                    程序目的 使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理 ## 第一部分：PDF的分割 使用的库文件 PyPDF2 实现PDF页数分割（12页一份）： from PyPDF2 import PdfWriter, PdfReader def split_pdf(input_file, output_prefix): input_pdf = PdfReader(open(input_file, &quot;rb&quot;)) num_pages&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg" class="type:primaryImage" alt="" /></p>
+                <h1 id="程序目的">程序目的</h1>
+<p>使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理</p><h1 id="程序实现">程序实现</h1>
+<pre><code>## 第一部分：PDF的分割
+</code></pre>
+<p><strong>使用的库文件</strong></p><p><code>PyPDF2</code></p><h2 id="代码">代码</h2>
+<p><strong>实现PDF页数分割（12页一份）：</strong></p><pre><code class="language-python">from PyPDF2 import PdfWriter, PdfReader
+
+
+def split_pdf(input_file, output_prefix):
+    input_pdf = PdfReader(open(input_file, &quot;rb&quot;))
+    num_pages = len(input_pdf.pages)
+    start_page = 0
+    file_index = 1
+    while start_page &lt; num_pages:
+        end_page = min(start_page + 12, num_pages)
+        output_pdf = PdfWriter()
+        for i in range(start_page, end_page):
+            output_pdf.add_page(input_pdf.pages[i])
+        output_path = f&quot;{output_prefix}_{file_index}.pdf&quot;
+        with open(output_path, &quot;wb&quot;) as output_file:
+            output_pdf.write(output_file)
+        start_page += 12
+        file_index += 1
+    print(&quot;complete&quot;)
+
+
+# 使用示例
+if __name__ == &quot;__main__&quot;:
+    input_file = &quot;C:/Users/XYZ/Desktop/Code/Python PDF/xyz.pdf&quot;  # 请将此替换为实际的输入文件路径
+    output_prefix = &quot;output_file&quot;  # 请将此替换为你想要的输出文件前缀
+    split_pdf(input_file, output_prefix)
+</code></pre>
+<h2 id="上传给ai进行分析">上传给AI进行分析</h2>
+<p><strong>实现方法</strong></p><ol>
+<li>找到免费的大模型API</li>
+<li>使用requests模块进行API的访问，并输出结果</li>
+</ol>
+<p><strong>实现代码</strong></p><p><em>实现对话功能：</em></p><p>所使用模型：Deepseek</p><pre><code class="language-python">import requests
+
+  
+
+user_input = input(&quot;请输入您的问题：\n&quot;)
+
+  
+
+# 设置API端点和密钥
+
+api_url = &quot;https://api.deepseek.com/v1/chat/completions&quot;
+
+api_key = &quot; &quot;
+
+  
+
+# 设置请求头
+
+headers = {
+
+    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
+
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+
+}
+
+  
+
+# 设置请求体
+
+data = {
+
+    &quot;model&quot;: &quot;deepseek-chat&quot;,  # 选择模型
+
+    &quot;messages&quot;: [
+
+        {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are a helpful assistant.&quot;},
+
+        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: user_input}
+
+    ]
+
+}
+
+  
+
+# 发送POST请求
+
+response = requests.post(api_url, headers=headers, json=data)
+
+  
+
+# 检查响应状态
+
+if response.status_code == 200:
+
+    # 解析响应内容
+
+    result = response.json()
+
+    print(&quot;DeepSeek回复:\n&quot;, result[&#39;choices&#39;][0][&#39;message&#39;][&#39;content&#39;])
+
+else:
+
+    print(&quot;请求失败，状态码:&quot;, response.status_code)
+
+    print(&quot;错误信息:&quot;, response.text)
+</code></pre>
+<p><em>尝试将文件上传上去：</em></p><pre><code class="language-python">import requests
+
+  
+
+# Deepseek API的URL
+
+api_url = &quot;https://api.deepseek.com/v1/analyze&quot;
+
+  
+
+# 你的API密钥
+
+api_key = &quot; &quot;
+
+  
+
+# 要上传的文件路径
+
+file_path = &quot;path_to_your_file.txt&quot;
+
+  
+
+# 设置请求头
+
+headers = {
+
+    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
+
+}
+
+  
+
+# 打开文件并准备上传
+
+with open(file_path, &quot;rb&quot;) as file:
+
+    files = {&quot;file&quot;: file}
+
+    # 发送POST请求
+
+    response = requests.post(api_url, headers=headers, files=files)
+
+  
+
+# 检查响应状态
+
+if response.status_code == 200:
+
+    # 解析并显示分析结果
+
+    result = response.json()
+
+    print(&quot;Analysis Result:&quot;)
+
+    print(result)
+
+else:
+
+    print(f&quot;Failed to upload file. Status code: {response.status_code}&quot;)
+
+    print(response.text)
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Markdown文本编辑器</title>
         <author>
@@ -17,7 +208,7 @@
         <link href="https://xyz-hgtc.github.io/markdownwen-ben-bian-ji-qi-tui-jian.html"/>
         <id>https://xyz-hgtc.github.io/markdownwen-ben-bian-ji-qi-tui-jian.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/7/97389b98fb414996b651e3dc633a8681.png" medium="image" />
-            <category term="随笔"/>
+            <category term="软件随笔"/>
 
         <updated>2025-01-02T22:00:08+08:00</updated>
             <summary>
@@ -57,7 +248,7 @@
         <link href="https://xyz-hgtc.github.io/kai-yuan-ruan-jian.html"/>
         <id>https://xyz-hgtc.github.io/kai-yuan-ruan-jian.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/6/OIP-C-md.webp" medium="image" />
-            <category term="随笔"/>
+            <category term="软件随笔"/>
 
         <updated>2024-12-28T09:49:41+08:00</updated>
             <summary>
@@ -237,7 +428,7 @@
         <link href="https://xyz-hgtc.github.io/huan-jing-bian-liang.html"/>
         <id>https://xyz-hgtc.github.io/huan-jing-bian-liang.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/4/Screenshot_20241109_233003.png" medium="image" />
-            <category term="随笔"/>
+            <category term="软件随笔"/>
 
         <updated>2024-11-09T23:26:19+08:00</updated>
             <summary>
@@ -263,7 +454,7 @@
         <link href="https://xyz-hgtc.github.io/linuxsheng-dian-pei-zhi-tlp.html"/>
         <id>https://xyz-hgtc.github.io/linuxsheng-dian-pei-zhi-tlp.html</id>
         <media:content url="https://xyz-hgtc.github.io/media/posts/3/Ping-Mu-Jie-Tu_20241105_220518.jpg" medium="image" />
-            <category term="随笔"/>
+            <category term="软件随笔"/>
 
         <updated>2024-11-05T22:03:20+08:00</updated>
             <summary>

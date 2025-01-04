@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
-Sitemap: https://xyz-hgtc.github.io/sitemap.xml
+Disallow: /

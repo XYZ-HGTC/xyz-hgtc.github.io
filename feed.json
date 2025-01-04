@@ -10,6 +10,22 @@
     },
     "items": [
         {
+            "id": "https://xyz-hgtc.github.io/python-pdf.html",
+            "url": "https://xyz-hgtc.github.io/python-pdf.html",
+            "title": "Python PDF",
+            "summary": "程序目的 使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理 ## 第一部分：PDF的分割 使用的库文件 PyPDF2 实现PDF页数分割（12页一份）： from PyPDF2 import PdfWriter, PdfReader def split_pdf(input_file, output_prefix): input_pdf = PdfReader(open(input_file, &quot;rb&quot;)) num_pages&hellip;",
+            "content_html": "<h1 id=\"程序目的\">程序目的</h1>\n<p>使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理</p><h1 id=\"程序实现\">程序实现</h1>\n<pre><code>## 第一部分：PDF的分割\n</code></pre>\n<p><strong>使用的库文件</strong></p><p><code>PyPDF2</code></p><h2 id=\"代码\">代码</h2>\n<p><strong>实现PDF页数分割（12页一份）：</strong></p><pre><code class=\"language-python\">from PyPDF2 import PdfWriter, PdfReader\n\n\ndef split_pdf(input_file, output_prefix):\n    input_pdf = PdfReader(open(input_file, &quot;rb&quot;))\n    num_pages = len(input_pdf.pages)\n    start_page = 0\n    file_index = 1\n    while start_page &lt; num_pages:\n        end_page = min(start_page + 12, num_pages)\n        output_pdf = PdfWriter()\n        for i in range(start_page, end_page):\n            output_pdf.add_page(input_pdf.pages[i])\n        output_path = f&quot;{output_prefix}_{file_index}.pdf&quot;\n        with open(output_path, &quot;wb&quot;) as output_file:\n            output_pdf.write(output_file)\n        start_page += 12\n        file_index += 1\n    print(&quot;complete&quot;)\n\n\n# 使用示例\nif __name__ == &quot;__main__&quot;:\n    input_file = &quot;C:/Users/XYZ/Desktop/Code/Python PDF/xyz.pdf&quot;  # 请将此替换为实际的输入文件路径\n    output_prefix = &quot;output_file&quot;  # 请将此替换为你想要的输出文件前缀\n    split_pdf(input_file, output_prefix)\n</code></pre>\n<h2 id=\"上传给ai进行分析\">上传给AI进行分析</h2>\n<p><strong>实现方法</strong></p><ol>\n<li>找到免费的大模型API</li>\n<li>使用requests模块进行API的访问，并输出结果</li>\n</ol>\n<p><strong>实现代码</strong></p><p><em>实现对话功能：</em></p><p>所使用模型：Deepseek</p><pre><code class=\"language-python\">import requests\n\n  \n\nuser_input = input(&quot;请输入您的问题：\\n&quot;)\n\n  \n\n# 设置API端点和密钥\n\napi_url = &quot;https://api.deepseek.com/v1/chat/completions&quot;\n\napi_key = &quot; &quot;\n\n  \n\n# 设置请求头\n\nheaders = {\n\n    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,\n\n    &quot;Content-Type&quot;: &quot;application/json&quot;\n\n}\n\n  \n\n# 设置请求体\n\ndata = {\n\n    &quot;model&quot;: &quot;deepseek-chat&quot;,  # 选择模型\n\n    &quot;messages&quot;: [\n\n        {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are a helpful assistant.&quot;},\n\n        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: user_input}\n\n    ]\n\n}\n\n  \n\n# 发送POST请求\n\nresponse = requests.post(api_url, headers=headers, json=data)\n\n  \n\n# 检查响应状态\n\nif response.status_code == 200:\n\n    # 解析响应内容\n\n    result = response.json()\n\n    print(&quot;DeepSeek回复:\\n&quot;, result[&#39;choices&#39;][0][&#39;message&#39;][&#39;content&#39;])\n\nelse:\n\n    print(&quot;请求失败，状态码:&quot;, response.status_code)\n\n    print(&quot;错误信息:&quot;, response.text)\n</code></pre>\n<p><em>尝试将文件上传上去：</em></p><pre><code class=\"language-python\">import requests\n\n  \n\n# Deepseek API的URL\n\napi_url = &quot;https://api.deepseek.com/v1/analyze&quot;\n\n  \n\n# 你的API密钥\n\napi_key = &quot; &quot;\n\n  \n\n# 要上传的文件路径\n\nfile_path = &quot;path_to_your_file.txt&quot;\n\n  \n\n# 设置请求头\n\nheaders = {\n\n    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,\n\n}\n\n  \n\n# 打开文件并准备上传\n\nwith open(file_path, &quot;rb&quot;) as file:\n\n    files = {&quot;file&quot;: file}\n\n    # 发送POST请求\n\n    response = requests.post(api_url, headers=headers, files=files)\n\n  \n\n# 检查响应状态\n\nif response.status_code == 200:\n\n    # 解析并显示分析结果\n\n    result = response.json()\n\n    print(&quot;Analysis Result:&quot;)\n\n    print(result)\n\nelse:\n\n    print(f&quot;Failed to upload file. Status code: {response.status_code}&quot;)\n\n    print(response.text)\n</code></pre>\n",
+            "image": "https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg",
+            "author": {
+                "name": "和光同尘"
+            },
+            "tags": [
+                   "程序随笔"
+            ],
+            "date_published": "2025-01-04T21:09:55+08:00",
+            "date_modified": "2025-01-04T21:11:16+08:00"
+        },
+        {
             "id": "https://xyz-hgtc.github.io/markdownwen-ben-bian-ji-qi-tui-jian.html",
             "url": "https://xyz-hgtc.github.io/markdownwen-ben-bian-ji-qi-tui-jian.html",
             "title": "Markdown文本编辑器",
@@ -20,7 +36,7 @@
                 "name": "和光同尘"
             },
             "tags": [
-                   "随笔"
+                   "软件随笔"
             ],
             "date_published": "2025-01-02T22:00:08+08:00",
             "date_modified": "2025-01-04T20:43:48+08:00"
@@ -36,7 +52,7 @@
                 "name": "和光同尘"
             },
             "tags": [
-                   "随笔"
+                   "软件随笔"
             ],
             "date_published": "2024-12-28T09:49:41+08:00",
             "date_modified": "2024-12-28T10:19:26+08:00"
@@ -68,7 +84,7 @@
                 "name": "和光同尘"
             },
             "tags": [
-                   "随笔"
+                   "软件随笔"
             ],
             "date_published": "2024-11-09T23:26:19+08:00",
             "date_modified": "2024-12-28T09:37:30+08:00"
@@ -84,7 +100,7 @@
                 "name": "和光同尘"
             },
             "tags": [
-                   "随笔"
+                   "软件随笔"
             ],
             "date_published": "2024-11-05T22:03:20+08:00",
             "date_modified": "2024-12-28T09:37:14+08:00"

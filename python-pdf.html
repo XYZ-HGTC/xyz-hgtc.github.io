@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python PDF - 和光探尘录</title><meta name="robots" content="noindex,nofollow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://xyz-hgtc.github.io/feed.xml"><link rel="alternate" type="application/json" href="https://xyz-hgtc.github.io/feed.json"><meta property="og:title" content="Python PDF"><meta property="og:image" content="https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg"><meta property="og:image:width" content="474"><meta property="og:image:height" content="474"><meta property="og:site_name" content="和光探尘录"><meta property="og:description" content="程序目的 使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理 ## 第一部分：PDF的分割 使用的库文件 PyPDF2 实现PDF页数分割（12页一份）： from PyPDF2 import PdfWriter, PdfReader def split_pdf(input_file, output_prefix): input_pdf = PdfReader(open(input_file, &quot;rb&quot;)) num_pages&hellip;"><meta property="og:url" content="https://xyz-hgtc.github.io/python-pdf.html"><meta property="og:type" content="article"><link rel="stylesheet" href="https://xyz-hgtc.github.io/assets/css/style.css?v=f1088634b7f26bb25f6e7cdc12f59905"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://xyz-hgtc.github.io/python-pdf.html"},"headline":"Python PDF","datePublished":"2025-01-04T21:09+08:00","dateModified":"2025-01-04T21:11+08:00","image":{"@type":"ImageObject","url":"https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg","height":474,"width":474},"description":"程序目的 使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理 ## 第一部分：PDF的分割 使用的库文件 PyPDF2 实现PDF页数分割（12页一份）： from PyPDF2 import PdfWriter, PdfReader def split_pdf(input_file, output_prefix): input_pdf = PdfReader(open(input_file, &quot;rb&quot;)) num_pages&hellip;","author":{"@type":"Person","name":"和光同尘","url":"https://xyz-hgtc.github.io/authors/xyz/"},"publisher":{"@type":"Organization","name":"和光同尘"}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body class="post-template lines"><div class="container lines lines--right"><header class="header"><a href="https://xyz-hgtc.github.io/" class="logo">和光探尘录</a></header><main class="main post"><article class="content"><header class="content__inner content__header"><h1 class="content__title">Python PDF</h1><div class="content__meta"><div class="content__meta__left"><a href="https://xyz-hgtc.github.io/authors/xyz/" class="invert content__author" rel="author" title="和光同尘">和光同尘</a></div><div class="content__meta__right"><time datetime="2025-01-04T21:09" class="content__date">2025/01/04 21:09:55</time></div></div></header><figure class="content__featured-image"><div class="content__featured-image__inner is-img-loading"><img src="https://xyz-hgtc.github.io/media/posts/8/OIP-C.jpg" srcset="https://xyz-hgtc.github.io/media/posts/8/responsive/OIP-C-xs.webp 384w, https://xyz-hgtc.github.io/media/posts/8/responsive/OIP-C-sm.webp 600w, https://xyz-hgtc.github.io/media/posts/8/responsive/OIP-C-md.webp 768w, https://xyz-hgtc.github.io/media/posts/8/responsive/OIP-C-lg.webp 1200w, https://xyz-hgtc.github.io/media/posts/8/responsive/OIP-C-xl.webp 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="474" width="474" alt=""></div></figure><div class="content__inner"><div class="content__entry"><h1 id="程序目的">程序目的</h1><p>使用Python将PDF分割成10页一份的PDF文件并将其交给AI进行处理</p><h1 id="程序实现">程序实现</h1><pre><code>## 第一部分：PDF的分割
+</code></pre><p><strong>使用的库文件</strong></p><p><code>PyPDF2</code></p><h2 id="代码">代码</h2><p><strong>实现PDF页数分割（12页一份）：</strong></p><pre><code class="language-python">from PyPDF2 import PdfWriter, PdfReader
+
+
+def split_pdf(input_file, output_prefix):
+    input_pdf = PdfReader(open(input_file, &quot;rb&quot;))
+    num_pages = len(input_pdf.pages)
+    start_page = 0
+    file_index = 1
+    while start_page &lt; num_pages:
+        end_page = min(start_page + 12, num_pages)
+        output_pdf = PdfWriter()
+        for i in range(start_page, end_page):
+            output_pdf.add_page(input_pdf.pages[i])
+        output_path = f&quot;{output_prefix}_{file_index}.pdf&quot;
+        with open(output_path, &quot;wb&quot;) as output_file:
+            output_pdf.write(output_file)
+        start_page += 12
+        file_index += 1
+    print(&quot;complete&quot;)
+
+
+# 使用示例
+if __name__ == &quot;__main__&quot;:
+    input_file = &quot;C:/Users/XYZ/Desktop/Code/Python PDF/xyz.pdf&quot;  # 请将此替换为实际的输入文件路径
+    output_prefix = &quot;output_file&quot;  # 请将此替换为你想要的输出文件前缀
+    split_pdf(input_file, output_prefix)
+</code></pre><h2 id="上传给ai进行分析">上传给AI进行分析</h2><p><strong>实现方法</strong></p><ol><li>找到免费的大模型API</li><li>使用requests模块进行API的访问，并输出结果</li></ol><p><strong>实现代码</strong></p><p><em>实现对话功能：</em></p><p>所使用模型：Deepseek</p><pre><code class="language-python">import requests
+
+  
+
+user_input = input(&quot;请输入您的问题：\n&quot;)
+
+  
+
+# 设置API端点和密钥
+
+api_url = &quot;https://api.deepseek.com/v1/chat/completions&quot;
+
+api_key = &quot; &quot;
+
+  
+
+# 设置请求头
+
+headers = {
+
+    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
+
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+
+}
+
+  
+
+# 设置请求体
+
+data = {
+
+    &quot;model&quot;: &quot;deepseek-chat&quot;,  # 选择模型
+
+    &quot;messages&quot;: [
+
+        {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: &quot;You are a helpful assistant.&quot;},
+
+        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: user_input}
+
+    ]
+
+}
+
+  
+
+# 发送POST请求
+
+response = requests.post(api_url, headers=headers, json=data)
+
+  
+
+# 检查响应状态
+
+if response.status_code == 200:
+
+    # 解析响应内容
+
+    result = response.json()
+
+    print(&quot;DeepSeek回复:\n&quot;, result[&#39;choices&#39;][0][&#39;message&#39;][&#39;content&#39;])
+
+else:
+
+    print(&quot;请求失败，状态码:&quot;, response.status_code)
+
+    print(&quot;错误信息:&quot;, response.text)
+</code></pre><p><em>尝试将文件上传上去：</em></p><pre><code class="language-python">import requests
+
+  
+
+# Deepseek API的URL
+
+api_url = &quot;https://api.deepseek.com/v1/analyze&quot;
+
+  
+
+# 你的API密钥
+
+api_key = &quot; &quot;
+
+  
+
+# 要上传的文件路径
+
+file_path = &quot;path_to_your_file.txt&quot;
+
+  
+
+# 设置请求头
+
+headers = {
+
+    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
+
+}
+
+  
+
+# 打开文件并准备上传
+
+with open(file_path, &quot;rb&quot;) as file:
+
+    files = {&quot;file&quot;: file}
+
+    # 发送POST请求
+
+    response = requests.post(api_url, headers=headers, files=files)
+
+  
+
+# 检查响应状态
+
+if response.status_code == 200:
+
+    # 解析并显示分析结果
+
+    result = response.json()
+
+    print(&quot;Analysis Result:&quot;)
+
+    print(result)
+
+else:
+
+    print(f&quot;Failed to upload file. Status code: {response.status_code}&quot;)
+
+    print(response.text)
+</code></pre></div><footer class="content__footer"><div class="content__tag-share"><div class="content__share"></div></div></footer></div></article><div class="content__related"><h3 class="content__related__title">Related posts</h3><div class="l-grid l-grid--2"><article class="c-card"><div class="c-card__wrapper"><figure class="c-card__image is-img-loading"><img src="https://xyz-hgtc.github.io/media/posts/1/OIP-C.jpeg" srcset="https://xyz-hgtc.github.io/media/posts/1/responsive/OIP-C-xs.webp 384w, https://xyz-hgtc.github.io/media/posts/1/responsive/OIP-C-sm.webp 600w, https://xyz-hgtc.github.io/media/posts/1/responsive/OIP-C-md.webp 768w, https://xyz-hgtc.github.io/media/posts/1/responsive/OIP-C-lg.webp 1200w" sizes="(min-width: 37.5em) 80vw, 50vw" loading="lazy" height="180" width="167" alt=""></figure><div class="c-card__content"><header><h2 class="c-card__title"><a href="https://xyz-hgtc.github.io/gao-zhong-xiao-gao-kao-pythonfu-xi-ti-gang.html" class="invert">高中小高考Python复习提纲</a></h2></header><footer class="c-card__meta"><a href="https://xyz-hgtc.github.io/tags/xue-xi-bi-ji/" class="c-card__tag">学习笔记</a></footer></div></div></article></div></div></main><footer class="footer"><div class="footer__left"><div class="footer__copy">不露锋芒，与世无争</div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="https://xyz-hgtc.github.io/assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="https://xyz-hgtc.github.io/assets/js/scripts.min.js?v=9c5ab7a87221183f149a42b3cceb7956"></script><script>function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();</script></body></html>
