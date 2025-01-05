@@ -3,12 +3,150 @@
     <title>和光探尘录</title>
     <link href="https://xyz-hgtc.github.io/feed.xml" rel="self" />
     <link href="https://xyz-hgtc.github.io" />
-    <updated>2025-01-04T21:11:16+08:00</updated>
+    <updated>2025-01-05T17:43:17+08:00</updated>
     <author>
         <name>和光同尘</name>
     </author>
     <id>https://xyz-hgtc.github.io</id>
 
+    <entry>
+        <title>Windows系统动画优化</title>
+        <author>
+            <name>和光同尘</name>
+        </author>
+        <link href="https://xyz-hgtc.github.io/windowsxi-tong-dong-hua-you-hua.html"/>
+        <id>https://xyz-hgtc.github.io/windowsxi-tong-dong-hua-you-hua.html</id>
+        <media:content url="https://xyz-hgtc.github.io/media/posts/9/2023071981326.jpg" medium="image" />
+            <category term="软件随笔"/>
+
+        <updated>2025-01-05T17:43:17+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://xyz-hgtc.github.io/media/posts/9/2023071981326.jpg" alt="" />
+                    面临的问题 在使用Windows之后，我发现动画关闭，整个系统非常的死板，而且很多图形加载的顺序很不舒服，但是有了动画，在窗口关闭和打开的时候非常拖沓，所以整理了一些加速窗口动画和减少窗口响应时间的方法。 按 Win + R，输入 regedit，按回车打开注册表编辑器。 导航到以下路径： HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM 修改或创建 AnimationsShiftKey 值： 如果 AnimationsShiftKey 不存在，右键空白处，选择 新建 &gt; DWORD (32位) 值，命名为&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://xyz-hgtc.github.io/media/posts/9/2023071981326.jpg" class="type:primaryImage" alt="" /></p>
+                <h1>面临的问题</h1>
+<p>在使用Windows之后，我发现动画关闭，整个系统非常的死板，而且很多图形加载的顺序很不舒服，但是有了动画，在窗口关闭和打开的时候非常拖沓，所以整理了一些加速窗口动画和减少窗口响应时间的方法。</p>
+<h1>解决方法</h1>
+<h2>加速动画</h2>
+<ol>
+<li>
+<p><strong>按 <code>Win + R</code></strong>，输入 <code>regedit</code>，按回车打开注册表编辑器。</p>
+</li>
+<li>
+<p><strong>导航到以下路径</strong>：</p>
+<div class="md-code-block">
+<div class="md-code-block-banner-wrap">
+<div class="md-code-block-banner">
+<div class="md-code-block-infostring"> </div>
+<div class="md-code-block-action">
+<div class="ds-markdown-code-copy-button">复制</div>
+</div>
+</div>
+</div>
+<pre>HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM</pre>
+</div>
+</li>
+<li>
+<p><strong>修改或创建 <code>AnimationsShiftKey</code> 值</strong>：</p>
+<ul>
+<li>
+<p>如果 <code>AnimationsShiftKey</code> 不存在，右键空白处，选择 <strong>新建 &gt; DWORD (32位) 值</strong>，命名为 <code>AnimationsShiftKey</code>。</p>
+</li>
+<li>
+<p>双击 <code>AnimationsShiftKey</code>，将其值设置为 <strong>1</strong>（表示启用动画加速）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>导航到以下路径</strong>：</p>
+<div class="md-code-block">
+<div class="md-code-block-banner-wrap">
+<div class="md-code-block-banner">
+<div class="md-code-block-infostring"> </div>
+<div class="md-code-block-action">
+<div class="ds-markdown-code-copy-button">复制</div>
+</div>
+</div>
+</div>
+<pre>HKEY_CURRENT_USER\Control Panel\Desktop</pre>
+</div>
+</li>
+<li>
+<p><strong>修改 <code>MenuShowDelay</code> 值</strong>：</p>
+<ul>
+<li>
+<p>找到 <code>MenuShowDelay</code>，双击并将值改为较小的数字（如 <strong>50</strong>）。这个值控制菜单显示的延迟时间，单位是毫秒。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>修改 <code>MinAnimate</code> 值</strong>：</p>
+<ul>
+<li>
+<p>找到 <code>MinAnimate</code>，双击并将其值设置为 <strong>1</strong>（表示启用动画，但不完全关闭）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关闭注册表编辑器</strong>，重启电脑使更改生效。</p>
+</li>
+</ol>
+<h2>减少响应时间</h2>
+<ol>
+<li>
+<p><strong>按 <code>Win + R</code></strong>，输入 <code>regedit</code>，按回车打开注册表编辑器。</p>
+</li>
+<li>
+<p><strong>导航到以下路径</strong>：</p>
+<div class="md-code-block">
+<div class="md-code-block-banner-wrap">
+<div class="md-code-block-banner">
+<div class="md-code-block-infostring"> </div>
+<div class="md-code-block-action">
+<div class="ds-markdown-code-copy-button">复制</div>
+</div>
+</div>
+</div>
+<pre>HKEY_CURRENT_USER\Control Panel\Desktop</pre>
+</div>
+</li>
+<li>
+<p><strong>修改 <code>MenuShowDelay</code> 值</strong>：</p>
+<ul>
+<li>
+<p>找到 <code>MenuShowDelay</code>，双击并将值改为 <strong>10</strong> 或更低（最小值为 0）。这个值控制菜单显示的延迟时间，单位是毫秒。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>修改 <code>WaitToKillAppTimeout</code> 值</strong>：</p>
+<ul>
+<li>
+<p>找到 <code>WaitToKillAppTimeout</code>，双击并将其值改为 <strong>1000</strong>（表示程序关闭的等待时间为 1 秒，默认值通常为 20000，即 20 秒）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>修改 <code>HungAppTimeout</code> 值</strong>：</p>
+<ul>
+<li>
+<p>找到 <code>HungAppTimeout</code>，双击并将其值改为 <strong>1000</strong>（表示程序无响应的判定时间为 1 秒，默认值通常为 5000，即 5 秒）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关闭注册表编辑器</strong>，重启电脑使更改生效。</p>
+</li>
+</ol>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Python PDF</title>
         <author>
